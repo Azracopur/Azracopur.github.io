@@ -1,2 +1,1 @@
-# Azracopur.github.io
-#düzenlenecek bunlar 
+assets folder for screenshots
