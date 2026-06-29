@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteGenie — Azra Çöpür</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">azra<span class="accent">.</span>dev</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">Hakkımda</a></li>
+        <li><a href="../index.html#experience">Deneyim</a></li>
+        <li><a href="../index.html#projects">Projeler</a></li>
+        <li><a href="../index.html#skills">Beceriler</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">İletişim</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <div class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">← Tüm Projeler</a>
+
+      <div class="project-hero-top">
+        <div class="project-hero-meta">
+          <span class="project-badge">Bitirme Projesi</span>
+          <span class="project-date">2025 – 2026</span>
+        </div>
+        <h1 class="project-hero-title">NoteGenie</h1>
+        <p class="project-hero-subtitle">Yapay zeka destekli akıllı eğitim ve not yönetimi platformu</p>
+        <div class="project-hero-tags">
+          <span class="tag">AI</span>
+          <span class="tag">Web</span>
+          <span class="tag">React.js</span>
+          <span class="tag">FastAPI</span>
+        </div>
+        <div class="project-hero-links">
+          <!-- GitHub veya demo linkini buraya ekleyebilirsin -->
+          <!-- <a href="https://github.com/azracopur/notegenie" target="_blank" class="btn btn-ghost">GitHub →</a> -->
+          <!-- <a href="#" class="btn btn-primary">Canlı Demo →</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT CONTENT -->
+  <div class="project-content">
+    <div class="container project-layout">
+
+      <!-- MAIN CONTENT -->
+      <main class="project-main">
+
+        <!-- PLACEHOLDER - Sen dolduracaksın -->
+        <div class="coming-soon-block">
+          <span class="coming-soon-icon">🚧</span>
+          <h2>Proje detayları yakında eklenecek</h2>
+          <p>
+            Bu bölüme projenin açıklamasını, teknik detaylarını, ekran görüntülerini 
+            ve öğrenimlerini ekleyebilirsin.
+          </p>
+          <p class="coming-soon-hint">
+            Aşağıdaki bölümleri HTML olarak doldurman yeterli ↓
+          </p>
+        </div>
+
+        <!--
+          ============================================================
+          BURAYA EKLEYEBİLECEKLERİN:
+
+          <h2 class="content-heading">Proje Hakkında</h2>
+          <p>Açıklama metni...</p>
+
+          <h2 class="content-heading">Teknik Mimari</h2>
+          <p>...</p>
+
+          <div class="project-image-wrap">
+            <img src="../assets/notegenie-screenshot.png" alt="NoteGenie ekran görüntüsü" />
+          </div>
+
+          <h2 class="content-heading">Öğrendiklerim</h2>
+          <ul class="content-list">
+            <li>madde 1</li>
+            <li>madde 2</li>
+          </ul>
+          ============================================================
+        -->
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="project-sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">Proje Bilgileri</h3>
+          <div class="sidebar-item">
+            <span class="sidebar-label">Tür</span>
+            <span class="sidebar-val">Bitirme Projesi</span>
+          </div>
+          <div class="sidebar-item">
+            <span class="sidebar-label">Tarih</span>
+            <span class="sidebar-val">2025 – 2026</span>
+          </div>
+          <div class="sidebar-item">
+            <span class="sidebar-label">Durum</span>
+            <span class="sidebar-val status-active">Aktif Geliştirme</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">Teknolojiler</h3>
+          <div class="sidebar-tags">
+            <span class="tag">AI / LLM</span>
+            <span class="tag">React.js</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <a href="../index.html#projects" class="sidebar-back-btn">← Diğer Projeler</a>
+      </aside>
+
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Hamburger for project pages
+    const hb = document.getElementById('hamburger');
+    const nl = document.querySelector('.nav-links');
+    hb.addEventListener('click', () => nl.classList.toggle('open'));
+  </script>
+</body>
+</html>
