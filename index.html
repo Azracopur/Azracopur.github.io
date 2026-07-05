@@ -505,7 +505,50 @@ ul{list-style:none}
 <script>
 // Project data
 const projects = {
-  notegenie:{emoji:'🎓',badge:'Bitirme Projesi',badgeCls:'',title:'NoteGenie',subtitle:'Yapay zeka destekli akıllı eğitim platformu',tags:['AI','Web','React.js','FastAPI','Python'],body:`<div class="modal-coming"><span>🚧</span><p>Proje detayları yakında eklenecek.<br>Ekran görüntüleri, teknik mimari ve öğrenimler burada olacak.</p></div>`},
+  notegenie:{
+    emoji:'🎓',
+    badge:'Bitirme Projesi',
+    badgeCls:'',
+    title:'NoteGenie',
+    subtitle:'Yapay Zeka Destekli Dijital Eğitim Ekosistemi ve İnteraktif İçerik Yönetim Platformu',
+    tags:['Google Gemini 2.5 Flash','FastAPI','React.js','PostgreSQL','Tailwind CSS'],
+    body:`
+      <div style="margin-bottom: 1.5rem; padding: 1rem; background: rgba(0, 212, 255, 0.05); border: 1px solid var(--border-accent); border-radius: 8px;">
+        <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-m); display: block; margin-bottom: 0.25rem;">✨ Akademik Başarı</span>
+        <p style="font-size: 0.9rem; color: var(--text); margin: 0;">Bu proje ve geliştirilen seyahat rehberi sistemi, <strong>uluslararası bir akademik kongrede bilimsel yayın olarak kabul edilmiştir.</strong></p>
+      </div>
+
+      <p style="margin-bottom: 1.25rem;">NoteGenie; YouTube eğitim videolarını veya ders PDF'lerini saniyeler içinde analiz ederek tamamen yapılandırılmış akıllı ders notlarına, interaktif quizlere ve semantik kavram haritalarına dönüştüren 3 katmanlı (3-tier) bir dijital öğrenme yönetim sistemidir (LMS).</p>
+      
+      <h4 style="color: var(--accent); font-family: var(--font-d); margin: 1.5rem 0 0.5rem; font-size: 1.1rem;">🛠️ Teknik Mimari & Katmanlar</h4>
+      <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+        <li style="padding-left: 1rem; border-left: 2px solid var(--accent2);"><strong style="color: var(--text);">Frontend:</strong> React (Vite) ve Tailwind CSS ile geliştirilmiş Tek Sayfa Uygulaması (SPA). Video akış takibi için YouTube IFrame Player API senkronizasyonu ve sunucuya yük bindirmeden çalışan istemci taraflı jsPDF raporlama motoru.</li>
+        <li style="padding-left: 1rem; border-left: 2px solid var(--accent2);"><strong style="color: var(--text);">Backend & API:</strong> Python FastAPI tabanlı, Starlette ve Pydantic şemaları ile uçtan uca doğrulanmış asenkron (async/await) REST API mimarisi. Veritabanı katmanında SQLAlchemy ORM entegrasyonu.</li>
+        <li style="padding-left: 1rem; border-left: 2px solid var(--accent2);"><strong style="color: var(--text);">Yapay Zeka & NLP:</strong> 1 Milyon token bağlam penceresine sahip <strong>Google Gemini 2.5 Flash API</strong> (google-genai SDK). RAG (Retrieval-Augmented Generation) mimarisiyle halüsinasyonsuz içerik sorgulama.</li>
+        <li style="padding-left: 1rem; border-left: 2px solid var(--accent2);"><strong style="color: var(--text);">Veri Çıkarımı & Depolama:</strong> PDF analizi için PyMuPDF (fitz), video deşifresi için youtube-transcript-api. Güvenli oturumlar için JWT (JSON Web Token) ve veri kalitesi için asenkron Hipo Labs Üniversite API entegrasyonu ile beslenen PostgreSQL DB.</li>
+      </ul>
+
+      <h4 style="color: var(--accent); font-family: var(--font-d); margin: 1.5rem 0 0.5rem; font-size: 1.1rem;">💡 Öne Çıkan Fonksiyonel Modüller</h4>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; font-size: 0.85rem;">
+        <div style="background: var(--bg-card2); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+          <strong style="color: var(--text); display: block; margin-bottom: 0.25rem;">📝 Akıllı Özet & Zaman Damgası</strong>
+          Hiyerarşik akademik özet çıkarma ve videonun kırılma noktalarına tıklandığında oynatıcıyı otomatik o saniyeye saran (seekTo) navigasyonel dizin.
+        </div>
+        <div style="background: var(--bg-card2); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+          <strong style="color: var(--text); display: block; margin-bottom: 0.25rem;">📊 Akademik Kavram Ağacı</strong>
+          Metinden süzülen teknik terimlerin anlamsal ilişkilerini animasyonlu kartlar ve 15 kelimelik hap akademik tanımlarla görselleştiren dinamik bilgi grafı (Knowledge Graph).
+        </div>
+        <div style="background: var(--bg-card2); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+          <strong style="color: var(--text); display: block; margin-bottom: 0.25rem;">🤖 RAG Tabanlı Soru-Cevap</strong>
+          Kullanıcıların işlenen video veya doküman bağlamından dışarı çıkmadan doğrudan kaynak metne sadık soru sorabildikleri yapay zeka eğitim asistanı.
+        </div>
+        <div style="background: var(--bg-card2); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+          <strong style="color: var(--text); display: block; margin-bottom: 0.25rem;">🎯 Tam Ekran Quiz Modülü</strong>
+          Metne dayalı dinamik üretilen 10 soruluk çoktan seçmeli interaktif sınav arayüzü. Anlık doğru/yanlış geri bildirimi ve PostgreSQL tabanlı en yüksek skor (highest_score) takibi.
+        </div>
+      </div>
+    `
+  },
   tubitak1001:{emoji:'🔬',badge:'TÜBİTAK 1001',badgeCls:'tb',title:'Akademik Araştırma Platformu',subtitle:'AI chatbot entegrasyonlu akademik destek web sistemi',tags:['PHP','Laravel','AI Chatbot','MySQL'],body:`<div class="modal-coming"><span>🚧</span><p>Proje detayları yakında eklenecek.</p></div>`},
   tubitak2209:{emoji:'🗺️',badge:'TÜBİTAK 2209',badgeCls:'tb',title:'Yapay Zeka Destekli Gezi Rehberi',subtitle:'Kullanıcıya özel AI destekli akıllı seyahat rehberi',tags:['AI','Mobile','Python'],body:`<div class="modal-coming"><span>🚧</span><p>Proje detayları yakında eklenecek.</p></div>`},
   battery:{emoji:'🔋',badge:'TÜBİTAK 2242',badgeCls:'tb',title:'Battery-Health SoH İzleme',subtitle:'Elektrikli araçlar için batarya sağlık izleme sistemi',tags:['IoT','Embedded','Python'],body:`<div class="modal-coming"><span>🚧</span><p>Proje detayları yakında eklenecek.</p></div>`},
